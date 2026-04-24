@@ -25,6 +25,7 @@ with tab1:
         ssc_p = st.slider("SSC % (10th)", 0, 100, 75)
         hsc_p = st.slider("HSC % (12th)", 0, 100, 70)
         degree_p = st.slider("Degree %", 0, 100, 72)
+        backlog = st.number_input('Backlogs', 0, 10, step = 1)
     with col2:
         cgpa = st.number_input("Current CGPA (0-10)", 0.0, 10.0, 8.0, step=0.1)
         attendance = st.slider("Attendance %", 0, 100, 85)
@@ -92,6 +93,7 @@ if submit_button:
         "hsc_percentage": float(hsc_p),
         "degree_percentage": float(degree_p),
         "cgpa": float(cgpa),
+        "backlog" : int(backlog),
         "entrance_exam_score": float(entrance_score),
         "technical_skill_score": float(tech_score),
         "soft_skill_score": float(soft_score),
